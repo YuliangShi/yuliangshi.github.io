@@ -87,7 +87,17 @@
     }
     .hero { padding: 40px 0 30px; }
     h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
-    h1 { margin: 0 0 13px; font-size: clamp(44px, 6.5vw, 68px); letter-spacing: -0.045em; line-height: 1.08; }
+    h1 {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15em 0.45em;
+      margin: 0 0 13px; font-size: clamp(32px, 4.5vw, 44px);
+      letter-spacing: -0.03em; line-height: 1.25;
+    }
+    .name-latin { white-space: nowrap; }
+    .name-chinese {
+      font-family: "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+      font-size: 0.78em; font-weight: 400; letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
     /* Section headings sit above the content, not in a separate left column. */
     .section {
       display: block;
@@ -172,7 +182,7 @@
       .shell { width: 100%; }
       .topbar, .skip-link, footer { display: none; }
       .hero { padding: 0 0 20px; }
-      h1 { font-size: 32pt; }
+      h1 { font-size: 24pt; }
       .section { display: block; padding: 18px 0; }
       .section-label { margin-bottom: 10px; break-after: avoid; }
       .paper, .talk { break-inside: avoid; }
@@ -208,7 +218,7 @@
 
     <main id="main">
       <div class="hero">
-        <h1>Yuliang Shi</h1>
+        <h1><span class="name-latin">Yuliang Shi</span> <span class="name-chinese" lang="zh-Hans">石瑜亮</span></h1>
       </div>
 
       <!-- ABOUT: edit the opening paragraph below to update your biography. -->
@@ -218,7 +228,7 @@
         </div>
         <div class="content">
           <div class="intro-text">
-            <p>I am a PhD student in mathematics at the <a href="https://www.math.ubc.ca/">University of British Columbia</a>, mentored by <strong>Omer Angel</strong> and <strong>Jonathan Hermon</strong>. I am also a visiting student at <a href="https://research.shanghai.nyu.edu/math">NYU Shanghai</a>. I completed Part III in Mathematical Statistics at the University of Cambridge and my undergraduate studies at NYU.</p>
+            <p>I am a PhD student in mathematics at the <a href="https://www.math.ubc.ca/">University of British Columbia</a>, mentored by <strong>Omer Angel</strong> and <strong>Jonathan Hermon</strong>. I am also a visiting student at <a href="https://research.shanghai.nyu.edu/math">NYU Shanghai</a>. I completed Part III at the University of Cambridge, earning a MASt in Mathematical Statistics.</p>
             <p class="about-email">Email: <a href="mailto:yuliang@math.ubc.ca">yuliang@math.ubc.ca</a> <span aria-hidden="true">·</span> <a href="https://scholar.google.com/citations?user=WqoziecAAAAJ&amp;hl=en" style="white-space: nowrap;">Google Scholar</a></p>
           </div>
         </div>
