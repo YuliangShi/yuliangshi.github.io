@@ -137,10 +137,11 @@
     .paper-links a { display: inline-block; margin-right: 9px; white-space: nowrap; }
     .paper-links a:last-child { margin-right: 0; }
     summary { cursor: pointer; color: var(--accent); width: fit-content; }
-    .talk + .talk { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; }
-    .talk h3 { font-size: 18px; line-height: 1.4; margin-bottom: 3px; }
+    /* Talks are more compact than papers; allow natural wrapping on small screens. */
+    .talk + .talk { margin-top: 10px; }
+    .talk h3 { font-size: 17px; line-height: 1.35; margin: 0 0 1px; }
     .talk-status { color: var(--accent); font-weight: 600; }
-    .talk-meta { color: var(--muted); font-size: 13px; line-height: 1.55; margin: 0 !important; }
+    .talk-meta { color: var(--muted); font-size: 13px; line-height: 1.4; margin: 0 !important; }
     .talk-meta time, .talk-meta a { white-space: nowrap; }
     .about-email { font-size: 15px; overflow-wrap: anywhere; }
     .teaching-role {
@@ -228,7 +229,7 @@
         </div>
         <div class="content">
           <div class="intro-text">
-            <p>I am a PhD student in mathematics at the <a href="https://www.math.ubc.ca/">University of British Columbia</a>, mentored by <strong>Omer Angel</strong> and <strong>Jonathan Hermon</strong>. I am also a visiting student at <a href="https://research.shanghai.nyu.edu/math">NYU Shanghai</a>. I completed Part III in Mathematical Statistics at the University of Cambridge and my undergraduate studies at NYU.</p>
+            <p>I am a PhD student in mathematics at the <a href="https://www.math.ubc.ca/">University of British Columbia</a>, mentored by <strong>Omer Angel</strong> and <strong>Jonathan Hermon</strong>. I am also a visiting student at <a href="https://research.shanghai.nyu.edu/math">NYU Shanghai</a>. I completed Part III at the University of Cambridge, earning a MASt in Mathematical Statistics.</p>
             <p class="about-email">Email: <a href="mailto:yuliang@math.ubc.ca">yuliang@math.ubc.ca</a> <span aria-hidden="true">·</span> <a href="https://scholar.google.com/citations?user=WqoziecAAAAJ&amp;hl=en" style="white-space: nowrap;">Google Scholar</a></p>
           </div>
         </div>
@@ -357,12 +358,12 @@
 
           <article class="talk">
             <h3>Activation times and sharp phase transitions in the frog model</h3>
-            <p class="talk-meta">Peking University · <time datetime="2026-09-28">September 28, 2026</time></p>
+            <p class="talk-meta">Peking University · <time datetime="2026-09-28">September 28, 2026</time> · <a href="https://stat.pku.edu.cn/en/Research/Activities1/Seminars/ProbabilitySeminar/dc3aef2553574a5997a6ec92c011a64c.htm" aria-label="Seminar details for the Peking University talk">Seminar details</a></p>
           </article>
 
           <article class="talk">
-            <h3>Activation times and sharp phase transitions in the frog model</h3>
-            <p class="talk-meta">Probability and Dynamical Systems Seminar · BIMSA · <time datetime="2026-10-13">October 13, 2026</time></p>
+            <h3>The frog model on transitive graphs</h3>
+            <p class="talk-meta">Probability and Dynamical Systems Seminar · BIMSA · <time datetime="2026-10-13">October 13, 2026</time> · <a href="https://www.bimsa.cn/talk/48962.html" aria-label="Seminar details for the BIMSA talk">Seminar details</a></p>
           </article>
         </div>
       </section>
