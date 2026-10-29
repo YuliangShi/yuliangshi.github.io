@@ -81,7 +81,9 @@
       nav .nav-submenu { left: auto; right: -95px; }
     }
     @media (max-width: 420px) {
-      nav .nav-submenu { left: -58px; right: auto; }
+      nav { position: relative; width: 100%; }
+      nav .nav-dropdown { position: static; }
+      nav .nav-submenu { left: 0; right: auto; }
     }
     .hero { padding: 40px 0 30px; }
     h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
@@ -98,14 +100,14 @@
     .section-note { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
     .content p { margin: 0 0 16px; }
     .content p:last-child { margin-bottom: 0; }
-    .intro-text { font-size: 17px; }
+    .intro-text, .research-text { font-size: 17px; }
     .intro-text strong { font-weight: 600; }
     .affiliations { margin-top: 22px; font-size: 13px; color: var(--muted); }
     .affiliations a { color: inherit; }
     .paper-subsection + .paper-subsection {
-      border-top: 1px solid var(--line); padding-top: 20px; margin-top: 22px;
+      border-top: 1px solid var(--line); padding-top: 16px; margin-top: 18px;
     }
-    .paper-subsection-header { margin-bottom: 12px; }
+    .paper-subsection-header { margin-bottom: 10px; }
     .paper-subsection-heading {
       margin: 0; font-family: inherit; font-size: 17px; font-weight: 600;
       line-height: 1.45; letter-spacing: 0; color: var(--accent);
@@ -115,12 +117,12 @@
     h3 a, h4 a { color: var(--ink); text-decoration: none; }
     h3 a:hover, h4 a:hover { color: var(--accent); text-decoration: underline; }
     /* Compact bibliographic entries: title, coauthors, then venue/year and links. */
-    .paper + .paper { margin-top: 16px; }
-    .paper h4 { margin: 0 0 3px; font-size: 18px; line-height: 1.4; letter-spacing: -0.01em; }
+    .paper + .paper { margin-top: 12px; }
+    .paper h4 { margin: 0 0 1px; font-size: 18px; line-height: 1.35; letter-spacing: -0.01em; }
     .paper .authors {
-      margin: 0 0 2px !important; font-size: 14px; line-height: 1.5; color: var(--muted);
+      margin: 0 0 1px !important; font-size: 14px; line-height: 1.4; color: var(--muted);
     }
-    .paper-reference { margin: 0 !important; font-size: 13px; line-height: 1.65; color: var(--muted); }
+    .paper-reference { margin: 0 !important; font-size: 13px; line-height: 1.5; color: var(--muted); }
     .paper-links { margin-left: 8px; }
     .paper-links a { display: inline-block; margin-right: 9px; white-space: nowrap; }
     .paper-links a:last-child { margin-right: 0; }
@@ -155,7 +157,7 @@
       .section-label { margin-bottom: 16px; }
       .section-label h2 { font-size: 24px; }
       .section-note { margin-top: 4px; }
-      .intro-text { font-size: 16px; }
+      .intro-text, .research-text { font-size: 16px; }
       .affiliations { margin-top: 15px; }
     }
     @media (max-width: 420px) {
@@ -185,6 +187,7 @@
     <header class="topbar">
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
+        <a href="#research">Research</a>
         <details class="nav-dropdown" id="papers-navigation">
           <summary aria-controls="papers-submenu">Papers<span class="nav-chevron" aria-hidden="true"></span></summary>
           <div class="nav-submenu" id="papers-submenu">
@@ -215,9 +218,19 @@
         </div>
         <div class="content">
           <div class="intro-text">
-            <p>I am a PhD student in mathematics at the <a href="https://www.math.ubc.ca/">University of British Columbia</a>, mentored by <strong>Omer Angel</strong> and <strong>Jonathan Hermon</strong>. I am also a visiting student at <a href="https://research.shanghai.nyu.edu/math">NYU Shanghai</a>. I completed Part III at the University of Cambridge, earning a MASt in Mathematical Statistics.</p>
+            <p>I am a PhD student in mathematics at the <a href="https://www.math.ubc.ca/">University of British Columbia</a>, mentored by <strong>Omer Angel</strong> and <strong>Jonathan Hermon</strong>. I am also a visiting student at <a href="https://research.shanghai.nyu.edu/math">NYU Shanghai</a>. I completed Part III in Mathematical Statistics at the University of Cambridge and my undergraduate studies at NYU.</p>
             <p class="about-email">Email: <a href="mailto:yuliang@math.ubc.ca">yuliang@math.ubc.ca</a> <span aria-hidden="true">·</span> <a href="https://scholar.google.com/citations?user=WqoziecAAAAJ&amp;hl=en" style="white-space: nowrap;">Google Scholar</a></p>
           </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH: a brief overview of current interests. -->
+      <section class="section" id="research" aria-labelledby="research-heading">
+        <div class="section-label">
+          <h2 id="research-heading">Research interests</h2>
+        </div>
+        <div class="content research-text">
+          <p>I am broadly interested in probability theory, particularly interacting particle systems and percolation. My work concerns the existence, sharpness, and continuity of phase transitions, as well as the growth and fluctuations of infection models on lattices and more general graphs. I also study stable matchings with random preferences.</p>
         </div>
       </section>
 
@@ -239,7 +252,6 @@
                 <span class="paper-venue">Preprint, 2026.</span>
                 <span class="paper-links">
                   <a aria-label="The long-range Bernoulli percolation continuity paper on arXiv" href="https://arxiv.org/abs/2610.35233">arXiv: 2610.35233</a>
-                  <a aria-label="PDF of the long-range Bernoulli percolation continuity paper" href="https://arxiv.org/pdf/2610.35233">PDF</a>
                 </span>
               </p>
             </article>
@@ -251,7 +263,6 @@
                 <span class="paper-venue">Preprint, 2026.</span>
                 <span class="paper-links">
                   <a aria-label="Percolation on bidirected graphs on arXiv" href="https://arxiv.org/abs/2610.28762">arXiv: 2610.28762</a>
-                  <a aria-label="PDF of Percolation on bidirected graphs" href="https://arxiv.org/pdf/2610.28762">PDF</a>
                 </span>
               </p>
             </article>
@@ -263,7 +274,6 @@
                 <span class="paper-venue">Preprint, 2026.</span>
                 <span class="paper-links">
                   <a aria-label="The heavy-tailed frog model on arXiv" href="https://arxiv.org/abs/2608.00399">arXiv: 2608.00399</a>
-                  <a aria-label="PDF of The heavy-tailed frog model" href="https://arxiv.org/pdf/2608.00399">PDF</a>
                 </span>
               </p>
             </article>
@@ -276,7 +286,6 @@
                 <span class="paper-links">
                   <a aria-label="Journal version of the frog model phase transition paper" href="https://doi.org/10.1007/s00440-026-01517-6">Journal</a>
                   <a aria-label="The frog model phase transition paper on arXiv" href="https://arxiv.org/abs/2512.06640">arXiv: 2512.06640</a>
-                  <a aria-label="PDF of the frog model phase transition paper" href="https://arxiv.org/pdf/2512.06640">PDF</a>
                 </span>
               </p>
             </article>
@@ -304,7 +313,6 @@
                 <span class="paper-venue"><em>International Conference on Machine Learning (ICML)</em>, 2025.</span>
                 <span class="paper-links">
                   <a aria-label="ICML proceedings entry for Trajectory inference with smooth Schrödinger bridges" href="https://proceedings.mlr.press/v267/hong25f.html">Proceedings</a>
-                  <a aria-label="PDF of Trajectory inference with smooth Schrödinger bridges" href="https://raw.githubusercontent.com/mlresearch/v267/main/assets/hong25f/hong25f.pdf">PDF</a>
                 </span>
               </p>
             </article>
