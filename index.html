@@ -39,12 +39,8 @@
     .skip-link:focus { top: 10px; }
     .shell { width: min(960px, calc(100% - 96px)); margin: 0 auto; }
     .topbar {
-      display: flex; justify-content: space-between; align-items: center; gap: 24px;
+      display: flex; justify-content: flex-end; align-items: center; gap: 24px;
       padding: 27px 0 23px; border-bottom: 1px solid var(--line);
-    }
-    .wordmark {
-      font-size: 13px; font-weight: 650; letter-spacing: 0.13em;
-      text-transform: uppercase; text-decoration: none; color: var(--ink);
     }
     nav { display: flex; gap: 26px; flex-wrap: wrap; }
     nav a { font-size: 13px; color: var(--muted); text-decoration: none; }
@@ -87,11 +83,7 @@
     @media (max-width: 420px) {
       nav .nav-submenu { left: -58px; right: auto; }
     }
-    .hero { padding: 65px 0 49px; }
-    .eyebrow {
-      margin: 0 0 14px; color: var(--accent); font-size: 12px;
-      font-weight: 650; letter-spacing: 0.16em; text-transform: uppercase;
-    }
+    .hero { padding: 40px 0 30px; }
     h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
     h1 { margin: 0 0 13px; font-size: clamp(44px, 6.5vw, 68px); letter-spacing: -0.045em; line-height: 1.08; }
     /* Section headings sit above the content, not in a separate left column. */
@@ -165,7 +157,7 @@
       .shell { width: calc(100% - 44px); }
       .topbar { align-items: flex-start; gap: 16px; }
       nav { gap: 8px 17px; justify-content: flex-end; }
-      .hero { padding: 46px 0 34px; }
+      .hero { padding: 30px 0 22px; }
       .section { padding: 25px 0 28px; }
       .section-label { margin-bottom: 16px; }
       .section-label h2 { font-size: 24px; }
@@ -198,7 +190,6 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="shell">
     <header class="topbar">
-      <a class="wordmark" href="#top" aria-label="Yuliang Shi, top of page">Yuliang Shi</a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <details class="nav-dropdown" id="papers-navigation">
@@ -221,7 +212,6 @@
 
     <main id="main">
       <div class="hero">
-        <p class="eyebrow">Mathematics · Probability</p>
         <h1>Yuliang Shi</h1>
       </div>
 
