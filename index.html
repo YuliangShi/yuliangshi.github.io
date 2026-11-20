@@ -143,16 +143,19 @@
     .talk-meta { color: var(--muted); font-size: 13px; line-height: 1.4; margin: 0 !important; }
     .talk-meta time, .talk-meta a { white-space: nowrap; }
     .about-email { font-size: 15px; overflow-wrap: anywhere; }
+    #teaching .section-label { margin-bottom: 10px; }
     .teaching-role {
-      margin: 0 0 12px; font-family: inherit; font-size: 15px;
-      font-weight: 600; line-height: 1.5; letter-spacing: 0;
+      margin: 0 0 6px; font-family: inherit; font-size: 15px;
+      font-weight: 600; line-height: 1.45; letter-spacing: 0;
     }
     .teaching-courses {
-      display: grid; grid-template-columns: max-content minmax(0, 1fr);
-      gap: 8px 20px; margin: 0; font-size: 15px; line-height: 1.6;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3px 28px; margin: 0; padding: 0; list-style: none;
+      font-size: 15px; line-height: 1.45;
     }
-    .teaching-courses dt { font-weight: 600; }
-    .teaching-courses dd { margin: 0; color: var(--muted); }
+    .teaching-courses li { min-width: 0; color: var(--muted); }
+    .teaching-course-code { color: var(--ink); font-weight: 600; white-space: nowrap; }
+    .teaching-courses .teaching-course-wide { grid-column: 1 / -1; }
     footer {
       display: flex; justify-content: space-between; gap: 20px; padding: 24px 0 35px;
       border-top: 1px solid var(--line); color: var(--muted); font-size: 12px;
@@ -168,6 +171,7 @@
       .section-note { margin-top: 4px; }
       .intro-text, .research-text { font-size: 16px; }
       .affiliations { margin-top: 15px; }
+      .teaching-courses { grid-template-columns: 1fr; row-gap: 4px; }
     }
     @media (max-width: 420px) {
       .topbar { flex-direction: column; gap: 12px; }
@@ -259,7 +263,6 @@
             <ul>
               <li><a href="#published-papers">Publications and preprints</a></li>
               <li><a href="#work-in-progress">Work in progress</a></li>
-              <li><a href="#other-papers">Other papers</a></li>
             </ul>
           </div>
         </details>
@@ -306,7 +309,7 @@
         </div>
       </section>
 
-      <!-- PAPERS: publications and preprints, work in progress, and other papers.
+      <!-- PAPERS: publications and preprints, followed by work in progress.
            Keep titles, coauthors, links, and publication status synchronized. -->
       <section class="section" id="papers" aria-labelledby="papers-heading">
         <div class="section-label">
@@ -361,6 +364,17 @@
                 </span>
               </p>
             </article>
+
+            <article class="paper" aria-labelledby="trajectory-title">
+              <h4 id="trajectory-title"><a href="https://proceedings.mlr.press/v267/hong25f.html">Trajectory inference with smooth Schrödinger bridges</a></h4>
+              <p class="authors">joint with Wanli Hong and Jonathan Niles-Weed</p>
+              <p class="paper-reference">
+                <span class="paper-venue"><em>International Conference on Machine Learning (ICML)</em>, 2025.</span>
+                <span class="paper-links">
+                  <a aria-label="ICML proceedings entry for Trajectory inference with smooth Schrödinger bridges" href="https://proceedings.mlr.press/v267/hong25f.html">Proceedings</a>
+                </span>
+              </p>
+            </article>
           </section>
 
           <section class="paper-subsection" id="work-in-progress" aria-labelledby="work-in-progress-heading">
@@ -380,21 +394,6 @@
             </article>
           </section>
 
-          <section class="paper-subsection" id="other-papers" aria-labelledby="other-papers-heading">
-            <header class="paper-subsection-header">
-              <h3 class="paper-subsection-heading" id="other-papers-heading">Other papers</h3>
-            </header>
-            <article class="paper" aria-labelledby="trajectory-title">
-              <h4 id="trajectory-title"><a href="https://proceedings.mlr.press/v267/hong25f.html">Trajectory inference with smooth Schrödinger bridges</a></h4>
-              <p class="authors">joint with Wanli Hong and Jonathan Niles-Weed</p>
-              <p class="paper-reference">
-                <span class="paper-venue"><em>International Conference on Machine Learning (ICML)</em>, 2025.</span>
-                <span class="paper-links">
-                  <a aria-label="ICML proceedings entry for Trajectory inference with smooth Schrödinger bridges" href="https://proceedings.mlr.press/v267/hong25f.html">Proceedings</a>
-                </span>
-              </p>
-            </article>
-          </section>
         </div>
       </section>
 
@@ -429,21 +428,20 @@
         </div>
       </section>
 
-      <!-- TEACHING: add confirmed courses, roles, institutions, and terms below. -->
+      <!-- TEACHING: a compact course list without dates. -->
       <section class="section" id="teaching" aria-labelledby="teaching-heading">
         <div class="section-label"><h2 id="teaching-heading">Teaching experience</h2></div>
         <div class="content">
-          <h3 class="teaching-role">Previous teaching assistant roles</h3>
-          <dl class="teaching-courses">
-            <dt>MATH 418/544</dt>
-            <dd>Probability I</dd>
-            <dt>MATH 303</dt>
-            <dd>Introduction to stochastic processes</dd>
-            <dt>MATH 220</dt>
-            <dd>Mathematical proof</dd>
-            <dt>MATH 344</dt>
-            <dd>Game theory</dd>
-          </dl>
+          <h3 class="teaching-role">Teaching assistant, University of British Columbia</h3>
+          <ul class="teaching-courses" role="list">
+            <li><span class="teaching-course-code">MATH 418/544:</span> Probability / Probability I</li>
+            <li><span class="teaching-course-code">MATH 419/545:</span> Stochastic processes / Probability II</li>
+            <li><span class="teaching-course-code">MATH 303:</span> Introduction to stochastic processes</li>
+            <li><span class="teaching-course-code">MATH 220:</span> Mathematical proof</li>
+            <li><span class="teaching-course-code">MATH 200:</span> Calculus III</li>
+            <li><span class="teaching-course-code">MATH 152:</span> Linear systems</li>
+            <li class="teaching-course-wide"><span class="teaching-course-code">MATH 103:</span> Integral calculus with applications to life sciences</li>
+          </ul>
         </div>
       </section>
     </main>
